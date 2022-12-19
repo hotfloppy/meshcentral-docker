@@ -1,0 +1,13 @@
+[Unit]
+Description=meshcentral
+
+[Service]
+#User=<user e.g. root>
+# Edit working directory
+WorkingDirectory=/data/github/meshcentral-docker
+ExecStart=docker-compose up -d
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
